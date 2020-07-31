@@ -1,3 +1,3 @@
-public interface IShape{
-    boolean contains();
+interface IShape{
+    boolean contains(Point point);
 }
