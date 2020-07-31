@@ -12,8 +12,8 @@ public class Rectangle implements IShape{
         double tx = point.getX();
         double ty = point.getY();
 
-        if(LeftTop.getX() < tx && LeftTop.getY() < ty &&
-           RightBottom.getX() > tx && RightBottom.getY() > ty){
+        if(LeftTop.getX() <= tx && LeftTop.getY() <= ty &&
+           RightBottom.getX() >= tx && RightBottom.getY() >= ty){
                return true;
            }
 
