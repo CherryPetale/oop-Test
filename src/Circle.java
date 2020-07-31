@@ -9,9 +9,11 @@ public class Circle implements IShape{
     }
 
     public boolean contains(Point point) {
-        
+
+        if(this.center.getX() + radius >= point.getX() &&
+           this.center.getY() + radius >= point.getY()){
+            return true;
+        }
         return false;
     }
-
-
 }
