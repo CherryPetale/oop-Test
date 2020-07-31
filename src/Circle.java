@@ -10,10 +10,15 @@ public class Circle implements IShape{
 
     public boolean contains(Point point) {
 
-        if(this.center.getX() + radius >= point.getX() &&
-           this.center.getY() + radius >= point.getY()){
+        if(distance(this.center.getX(), point.getX()) <= radius &&
+           distance(this.center.getY(), point.getY()) <= radius){
             return true;
         }
+
         return false;
+    }
+
+    private double distance(double a, double b){
+        return Math.abs(a - b);
     }
 }
